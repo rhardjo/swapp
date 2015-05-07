@@ -1,0 +1,185 @@
+/* THIS APP USES THE ZURB FOUNDATION FRAMEWORK */
+@import url(http://fonts.googleapis.com/css?family=Roboto:700,400);
+
+body {
+  margin: 0 0 75px;
+  margin-bottom: -150px;
+  -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+  -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+}
+
+#topbar > section > h2 {
+  margin-top: 0.1em;
+}
+
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
+
+section {
+  height: 86vh;
+}
+#home {
+  background: #21988A;
+  color: white;
+  font-size: 2em;
+  font-weight: 700;
+  height: 90%
+}
+.teaser-div {
+  margin-top: 4em;
+}
+#btnTeaser {
+  margin-top: 2em;
+  border: 2px solid #fff;
+  -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+#teaserHead {
+  color: white;
+}
+
+#cameraPicture {
+  height: auto;
+  max-width: 80%;
+}
+
+#map-canvas{
+  width: 100%;
+  height: 14em;
+}
+
+#img-map {
+  margin-bottom: -12em;
+  display: block;
+  text-align: center;
+  max-width: 100%
+}
+
+.icon-bar > .btnActive {
+    background: #21988A;
+}
+.icon-bar > .btnInactive {
+    background: #262626;
+}
+
+.emotion-label > input {
+  display:none;
+}
+.emotion-label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
+  border:2px solid #21988A;
+}
+.emotion-label {
+  text-align: center;
+}
+
+#emotionText{
+  text-align: center;
+}
+#emotionIcon{
+  display: block;
+  margin: 0 auto;
+  max-width: 30%;
+}
+
+#photo-div {
+  margin-top: 0em !important;
+}
+
+#photo-div > *{
+  margin: 5px;
+  max-width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*LOGINSCHERM*/
+#login{
+  background-color: #21988A;
+  color:#ffffff;
+  height: 92%;
+}
+
+#login-container{
+  width: 60%;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#login-container input{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#login-container h3{
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.button-greenbg{
+  width: 80%;
+  height: 40px;
+}
+
+#buttonholder{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#btnInlog {
+  background-color: white;
+  color: #666;
+  border: 0px solid;
+  -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#back-button{
+  margin-top: 16px;
+}
+
+#back-button a:hover{
+    -webkit-transition: background-color 300ms linear;
+  -moz-transition: background-color 300ms linear;
+  -o-transition: background-color 300ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 300ms linear;
+  background-color: #1B7E73;
+  color: #ffffff;
+}
+
+.back-button{
+  background-color: #21988A;
+  padding:8px 22px;
+  color: #ffffff;
+  border-radius: 45px 1px 1px 45px;   
+}
+
+#camera2 .text-center{
+  margin-top: -26px;
+}
+
+#image-top :§first-child {
+  margin-top: 2em;
+}

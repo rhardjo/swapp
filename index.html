@@ -1,0 +1,173 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swapp App</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/project.css" />
+    <link rel="stylesheet" href="icons/foundation-icons.css" />
+    <script type="text/javascript" src="phonegap.js"></script>
+    <script type="text/javascript" src="js/project.js"></script>
+  </head>
+  <body onload="loadScript()">
+    
+    <nav class="tab-bar show" id="topbar">
+      <section class="middle tab-bar-section">
+        <h2 class="title">Swapp</h2>
+      </section>
+    </nav>
+    
+    <!--INLOGSCHERM-->
+    <section class="show" id="login">
+      <div class="row">
+        <div class="large-12 columns">
+          <div id="login-container">
+            <h3>inloggen</h3>
+            <input type="text" placeholder="Gebruikersnaam">
+            <input type="password" placeholder="Wachtwoord">
+            <a href="#" class="button expand" id="btnInlog">Doorgaan</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!--COUNTDOWN-->
+    <section class="hide" id="home">
+      <div class="row">
+        <div class="large-12 columns teaser-div">
+          <div>
+            <h3 class="text-center" id="teaserHead">Shine Festival begint over:</h3>
+            <div id="newcountdown" class="text-center"></div>
+        </div>
+      </div>        
+    </section>
+
+    <!--GEOLOCATION-->
+    <section class="hide" id="maps">
+      <div class="row">
+        <div class="large-12 columns">
+          <h3 class="text-center">Maps</h3>
+          <div id="img-map" class="show">
+            <img src="img/heatmap.png" alt="heatmap">
+          </div>
+          <div id="map-canvas"></div>
+          <div class="text-center" id="lat"></div>
+          <div class="text-center" id="long"></div>
+          <a href="#" class="button expand" id="btnGetPos">Waar ben ik nu?</a>
+        </div>
+      </div>       
+    </section>  
+
+   <!--EMOTION-->
+    <section class="hide" id="camera">
+      <div class="row">
+        <div class="large-12 columns">
+          <h3 class="text-center">Hoe voel je je nu? </h3>
+          <ul class="small-block-grid-4">
+            <li>
+              <label class="emotion-label">
+                <input type="radio" name="emotion" class="emotion-radio" value="blij"/>
+                <img src="svg/blij.svg" alt="Blij">
+                Blij
+              </label>
+            </li>
+            <li>
+              <label class="emotion-label">
+                <input type="radio" name="emotion" class="emotion-radio" value="boos"/>
+                <img src="svg/boos.svg" alt="Boos">
+                Boos
+              </label>
+            </li>
+            <li>
+              <label class="emotion-label">
+                <input type="radio" name="emotion" class="emotion-radio" value="bang" />
+                <img src="svg/bang.svg" alt="Bang">
+                Bang
+              </label>
+            </li>
+            <li>
+              <label class="emotion-label">
+                <input type="radio" name="emotion" class="emotion-radio" value="verdrietig" />
+                <img src="svg/verdrietig.svg" alt="Verdrietig">
+                Verdrietig
+              </label>
+            </li>
+            <li>
+              <label class="emotion-label">
+                <input type="radio" name="emotion" class="emotion-radio" value="verbaasd" />
+                <img src="svg/verbaasd.svg" alt="Verbaasd">
+                Verbaasd
+              </label>
+            </li>
+            <li>
+              <label class="emotion-label">
+                <input type="radio" name="emotion" class="emotion-radio" value="verveeld" />
+                <img src="svg/verveeld.svg" alt="Verveeld">
+                Verveeld
+              </label>
+            </li>
+            <li>
+              <label class="emotion-label">
+                <input type="radio" name="emotion" class="emotion-radio" value="gelukkig" />
+                <img src="svg/gelukkig.svg" alt="Gelukkig">
+                Gelukkig
+              </label>
+            </li>
+            <li>
+              <label class="emotion-label">
+                <input type="radio" name="emotion" class="emotion-radio" value="jaloers" />
+                <img src="svg/jaloers.svg" alt="Jaloers">
+                Jaloers
+              </label>
+            </li>
+          </ul> 
+          <img id="emotionIcon" src="">
+          <h5 id="emotionText"></h5> 
+          <a href="#" class="button expand" id="btnCamera2">Ga Verder</a>         
+        </div>
+      </div>       
+    </section> 
+
+   <!--CAMERA FUNCTION -->
+    <section class="hide" id="camera2">
+      <div class="row">
+        <div class="large-12 columns camera2-div">
+          <div id="back-button">
+              <a class ="back-button" href="#" id="backButton">Terug</a>
+          </div>
+          <h3 class="text-center">Selfie!</h3>
+<!--
+          <ul class="button-group radius even-2">
+            <li><a href="#" class="button" id="btnCapture">Maak foto</a></li>
+            <li><a href="#" class="button" id="btnSave">Foto opslaan</a></li>
+          </ul>
+-->
+          <a href="#" class="button expand" id="btnCapture">Beeld de emotie uit</a>
+          <div class="text-center" id="photo-div">
+            <img id="image-top" src="//photo">
+            <img id="image-mid" src="//photo">
+            <img id="image-bot" src="//photo">
+          </div>   
+        </div>
+      </div>       
+    </section>
+    
+    <!--NAVBAR-->
+    <div class="icon-bar three-up hide" id="iconbar">
+      <a class="item btnActive" id="btnHome">
+        <i class="fi-home"></i>
+      </a>
+      <a class="item btnInactive" id="btnMaps">
+        <i class="fi-map"></i>
+      </a>
+      <a class="item btnInactive" id="btnCamera">
+        <i class="fi-camera"></i>
+      </a>
+    </div>    
+        
+    <script type="text/javascript" src="js/foundation.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBF_WQB9om3LOp48tE85Ck8wXS1YKEwxM8">
+</script>
+  </body>
+</html>
